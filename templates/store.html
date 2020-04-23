@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +26,7 @@
                     <br>
                     <div class="card card-body">
                         <h4>{{product.name}}</h4>
-                        <img src="{{product.image_url}}" alt="images">
+                        <img src="{% static 'images/Coffee5.png' %}" alt="images">
                         <hr>
                         <p>{{product.description}}</p>
                         <hr>
