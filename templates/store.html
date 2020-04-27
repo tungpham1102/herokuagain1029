@@ -12,8 +12,9 @@
             background-color: #f0f0f0;
         }
         img {
-            max-width: 228px;
-            max-height: 346px;
+            width: 228px;
+            height: 346px;
+            border-radius: 25%;
             box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2);
         }
     </style>
@@ -26,13 +27,13 @@
                     <br>
                     <div class="card card-body">
                         <h4>{{product.name}}</h4>
-                        <img src="{% static 'images/Coffee5.png' %}" alt="images">
+                        <img src="/static/images/{{product.image}}" alt="images">
                         <hr>
                         <p>{{product.description}}</p>
                         <hr>
                         <h4>${{product.price}}</h4>
                         <hr>
-                        <a target="_blank" class="btn btn-sm btn-warning" href="{% url 'checkout' product.id%}">Buy Now</a>
+                        <a target="_blank" class="btn btn-sm btn-warning" href="{% url 'checkout' product.id %}">Buy Now</a>
                     </div>
                 </div>
             {% endfor %}

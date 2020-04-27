@@ -6,7 +6,7 @@ from django.db import models
 class Product(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
-    image_url = models.CharField(max_length=1000, null=True, blank=True)
+    image = models.ImageField(default='default.jpg', null=True, blank=True)
     price = models.FloatField(null=True, blank=True)
 
     def __str__(self):

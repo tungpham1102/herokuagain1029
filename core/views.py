@@ -8,10 +8,6 @@ from .models import Product, Order
 # Create your views here.
 
 
-def simple_checkout(request):
-    return render(request, 'simple_checkout.html')
-
-
 def store(request):
     products = Product.objects.all()
     context = {
